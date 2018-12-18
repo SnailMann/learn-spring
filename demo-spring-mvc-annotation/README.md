@@ -1,7 +1,7 @@
 # 演示传统的Spring Web MVC项目
 
 ## Spring Web 注解驱动
-
+与demo-spring-mvc-xml项目成对比项目
 
 ### 开发版本依赖
 
@@ -26,6 +26,9 @@
 如RequestMappingHandlerMapping等
 
 - @EnableWebMvc的本质是将DelegatingWebMvcConfiguration类注入到Spring容器中，所以需要看具体实现，则通过该类查看
+
+- 所以@EnableWebMvc和@Configuration两个注解就可以代替web.xml配置的方式，实际初始化配置则是DelegatingWebMvcConfiguration类完成的
+
 
 #### 自定义组件： WebMvcConfigurer(Spring Bean)
 
@@ -54,7 +57,18 @@ public class WebMvcConfig implements WebMvcConfigurer {
 ```
 
 
+### 如果不配置根Spring容器，那么SpringMVC容器则没有父容器
 
+```xml
+    <!-- 加载spring容器 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext-*.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+```
 
-
+- 如果在web.xml文件中，没有配置这段代码，则不会初始化父容器
 

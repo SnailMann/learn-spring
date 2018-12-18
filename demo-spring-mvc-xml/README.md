@@ -1,6 +1,9 @@
 # 演示传统的Spring Web MVC项目
 
-## Spring Framework的一般认识
+## Spring Framework的XML开发模式
+
+与demo-spring-mvc-annotation项目对比
+
 
 ### 基础架构：Servlet
 Web Browser <-> WebSerber <-> Servlet Container <-> Database

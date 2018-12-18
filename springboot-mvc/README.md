@@ -60,3 +60,38 @@ API判断（@ConditionalOnClass）
 bean判断（@ConditionalOnMissingBean,@ConditionalOnBean）
 
 - WebMvcConfigurationSupport
+
+
+
+### 错误处理：springboot兼容jsp
+
+为了让springboot兼容jsp，我们需要在pom.xml中加入这几个依赖
+
+```xml
+        <!--springboot兼容jsp-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+```
+
+为了让项目能找到jsp所在的路径，我们需要
+```xml
+    <!--springboot兼容jsp,找不到jsp路径-->
+    <packaging>war</packaging>
+```
+
+最后将springboot项目打成war包，通过java -jar 执行war包就可以了（是war包，不是jar包）
+
+```xml
+java -jar springboot-mvc-0.0.1-SHAPSHOT.war
+```

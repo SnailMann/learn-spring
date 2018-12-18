@@ -13,12 +13,16 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-mvc</name>
     <description>Demo project for Spring Boot</description>
+    <!--springboot兼容jsp,找不到jsp路径-->
+    <packaging>war</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
+
     <dependencies>
+        <!--springboot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -29,6 +33,21 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--springboot兼容jsp-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

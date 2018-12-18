@@ -7,7 +7,7 @@
 
     <!-- SpringMVC容器扫描包-->
     <!--虽然我们这里说的是注解驱动，但是必须要的xml配置可能还是需要的,比如我们的配置bean还是需要这里被扫描的-->
-    <context:component-scan base-package="com.snailmann.spring"/>
+ <!--   <context:component-scan base-package="com.snailmann.spring"/>-->
 
 
 

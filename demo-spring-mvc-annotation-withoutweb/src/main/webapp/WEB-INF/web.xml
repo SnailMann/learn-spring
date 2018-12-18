@@ -1,6 +1,7 @@
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
     <!--配置DispatcherServlet-->
+<!--
     <servlet>
         <servlet-name>springmvc</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -10,10 +11,11 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-    <!--Servlet映射，所有数据都会经过DispatcherServlet-->
+    &lt;!&ndash;Servlet映射，所有数据都会经过DispatcherServlet&ndash;&gt;
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+-->
 
 </web-app>

@@ -10,9 +10,3 @@
 - 注解处理：@ExceptionHandler
 - 切面通知：@ControllerAdvice
 
-
-#### 模型属性：@ModelAttribute
-
-#### 请求头： @RequestHeader
-
-#### Cookie: @CookieValue

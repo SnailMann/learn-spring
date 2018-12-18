@@ -12,7 +12,7 @@ Developing spring project using XML mode
 
 - demo-spring-mvc-annotation
 
-Developing spring framework project useing annotation mode and ontrast with project demo-spring-mvc-xml
+Developing spring framework project useing annotation mode and contrast with project demo-spring-mvc-xml
 
 
 - spring-mvc-annotation-property

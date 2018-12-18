@@ -14,33 +14,6 @@ public class HelloController {
         return "hello";
     }
 
-    /**
-     * 测试 {@link HelloWorldControllerAdvice}
-     * @return
-     */
-    @RequestMapping("/index")
-    public String index() {
-        System.out.println("index");
-        return "index";
-    }
-
-
-    /**
-     *
-     * 测试 {@link HelloWorldControllerExceptionAdvice}
-     * 我们测试时不传入value，但是RequestParam是必传的，所以会抛异常
-     * 所以会被{@link HelloWorldControllerExceptionAdvice}所拦截
-     *
-     * @param value
-     * @param model
-     * @return
-     */
-    @RequestMapping("/exception/index")
-    public String exceptionIndex(@RequestParam int value ,Model model) {
-        System.out.println("exception index");
-        return "index";
-    }
-
 
     /**
      * 使用@RequestHeader获取指定请求头
@@ -59,6 +32,17 @@ public class HelloController {
         model.addAttribute("jsessionId",jsessionId);
 
         return "index";
+    }
+
+
+    /**
+     * 不管请求是什么，会将message的值插入到所有请求跳转的jsp模板中
+     *
+     * @return
+     */
+    @ModelAttribute("message")
+    public String message() {
+        return "hello world";
     }
 
 

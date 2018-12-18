@@ -44,4 +44,21 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     }
 
+    /**
+     * 这里是自定义了拦截器组件，注册到InterceptorRegistry中
+     * 然后我们debug DispatcherServlet就可以看到每一个handler对象就带有符合的拦截器引用
+     *
+     * @param registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new HandlerInterceptor() {
+            @Override
+            public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+                System.out.println("Interceptor....");
+                return true;
+            }
+        });
+
+    }
 }

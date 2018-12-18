@@ -2,8 +2,8 @@
 
 ## Spring Framework的XML开发模式
 
-与demo-spring-mvc-annotation项目对比
-
+- 与demo-spring-mvc-annotation项目对比
+- 所有东西都是通过xml的方式配置
 
 ### 基础架构：Servlet
 Web Browser <-> WebSerber <-> Servlet Container <-> Database
@@ -46,38 +46,6 @@ Web Browser <-> WebSerber <-> Servlet Container <-> Database
     </servlet-mapping>
 ```
 
-
-
-
-### 使用嵌入式Tomcat容器:
-
-```xml
- <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.1</version>
-                <executions>
-                    <execution>
-                        <id>tomcat-run</id>
-                        <goals>
-                            <goal>exec-war-only</goal>
-                        </goals>
-                        <phase>package</phase>
-                        <configuration>
-                            <!--ServletContext Path-->
-                            <path>/</path>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-```
-
-
-
 #### Web MVC 核心组件
 
 - HandlerMapping
@@ -113,3 +81,29 @@ DispatcherServlet -> HandlerMapping -> Controller ->(用户实现，Service、Da
 HandlerAdapter -> DispatcherServlet -> ViewResolver -> View -> Response
 
 
+### 使用嵌入式Tomcat容器:
+
+```xml
+ <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.1</version>
+                <executions>
+                    <execution>
+                        <id>tomcat-run</id>
+                        <goals>
+                            <goal>exec-war-only</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <!--ServletContext Path-->
+                            <path>/</path>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+```

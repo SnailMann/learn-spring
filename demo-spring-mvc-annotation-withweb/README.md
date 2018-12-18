@@ -1,7 +1,12 @@
 # 演示传统的Spring Web MVC项目
 
 ## Spring Web 注解驱动
-与demo-spring-mvc-xml项目成对比项目
+
+- 与demo-spring-mvc-xml项目成对比项目
+- 依然通过web.xml配置包扫描，Spring MVC容器，但是不同配置web层需要的Bean
+- 所以这是个半xml半注解的方案，核心配置依然使用xml配置
+
+
 
 ### 开发版本依赖
 

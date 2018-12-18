@@ -13,29 +13,11 @@ import org.springframework.web.servlet.view.JstlView;
  * Spring MVC 配置类
  *
  * 当我们需要自定义组件的使用，就需要实现WebMvcConfigurer接口
- *
+ * 为了让SpringBoot自动化装配成功，所以我们要去除掉@EnableWebMvc，他们两者只能取其一
  */
+
+/*@EnableWebMvc*/
 @Configuration
-@EnableWebMvc
 public class WebMvcConfig implements WebMvcConfigurer {
-
-
-    /**
-     * 注解方式配置InternalResourceViewResolver，视图解析器
-     * 覆盖默认配置
-     * 原来是在springmvc的xml文件中配置视图解析器
-     *
-     * @return
-     */
-    @Bean
-    public ViewResolver viewResolver(){
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/jsp/");
-        viewResolver.setSuffix(".jsp");
-
-        return viewResolver;
-
-    }
 
 }

@@ -3,6 +3,8 @@
 
 ## 简化Spring Web MVC
 
+这个工程是为了从原来spring framework的模式下转换为spring boot的工程，可以说是将传统spring工程升级的过程
+
 - Spring Boot时代的简化
 	1. 完全的自动化装配，不需要我们去实现接口，注解还是其他东西
 	2. 条件装配
@@ -95,3 +97,10 @@ bean判断（@ConditionalOnMissingBean,@ConditionalOnBean）
 ```xml
 java -jar springboot-mvc-0.0.1-SHAPSHOT.war
 ```
+
+
+
+#### 关于springboot项目外部化配置
+
+关于springboot项目外部化配置的内容，我们可以在autoconfigure包下找到spring-configuration-metadata.json中找到外部化配置的具体参数
+当然，还有其他的包或者其他文件，一般是json文件

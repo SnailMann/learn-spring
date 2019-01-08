@@ -2,13 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>jsp</title>
 </head>
 <body>
-message: ${message}
-<br/>
-accessLanguage: ${accessLanguage}
-<br/>
-jsessionId: ${jsessionId}
+jsp: ${message}
 </body>
 </html>

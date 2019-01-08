@@ -9,31 +9,34 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.snailmann</groupId>
-    <artifactId>springboot-mvc</artifactId>
+    <artifactId>springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-mvc</name>
+    <name>springboot-view</name>
     <description>Demo project for Spring Boot</description>
-    <!--springboot兼容jsp,找不到jsp路径-->
     <packaging>war</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
-
     <dependencies>
-        <!--springboot-->
+        <!-- springboot web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!-- springboot test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--springboot兼容jsp,因为springboot已经不推荐使用jsp-->
+        <!--thymeleaf-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <!--jsp-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -43,12 +46,9 @@
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
-
     </dependencies>
+
+
 
     <build>
         <plugins>

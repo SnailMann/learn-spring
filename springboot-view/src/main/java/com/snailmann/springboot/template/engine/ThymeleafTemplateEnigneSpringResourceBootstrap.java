@@ -18,7 +18,7 @@ import java.io.IOException;
  * Thymeleaf和Spring资源进行整合的一个小实例
  *
  */
-public class ThymeleafTemplateEnigneBootstrap2 {
+public class ThymeleafTemplateEnigneSpringResourceBootstrap {
 
     public static void main(String[] args) throws IOException {
         // 构建引擎

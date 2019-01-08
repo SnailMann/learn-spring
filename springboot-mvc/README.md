@@ -66,7 +66,7 @@ bean判断（@ConditionalOnMissingBean,@ConditionalOnBean）
 
 
 ### 错误处理：springboot兼容jsp
-
+因为spring boot已经不推荐使用jsp了，所以是springboot工程中是没有jsp依赖的jar包的
 为了让springboot兼容jsp，我们需要在pom.xml中加入这几个依赖
 
 ```xml

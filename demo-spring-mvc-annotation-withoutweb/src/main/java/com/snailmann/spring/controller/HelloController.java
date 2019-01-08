@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class HelloController {
 
 
+
     @RequestMapping("")
     public String print() {
         System.out.println("hello");

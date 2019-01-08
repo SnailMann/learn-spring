@@ -1,13 +1,14 @@
 package com.snailmann.spring.servlet.support;
 
-import com.snailmann.spring.config.DispatcherServletConfiguration;
-import com.snailmann.spring.config.WebMvcConfig;
+import com.snailmann.spring.config.DispatcherServletConfig;
+import com.snailmann.spring.config.ContextLoaderListenerConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
 /**
  * 这里采用注解驱动的方式
  * Spring Web Mvc 自动装配 默认实现
+ * 继承AbstractAnnotationConfigDispatcherServletInitializer便可以声明DispatcherServlet和ContextLoaderListener
  *
  */
 public class DefaultAnnotationConfigDispatcherServletInitializer
@@ -16,11 +17,12 @@ public class DefaultAnnotationConfigDispatcherServletInitializer
 
     /**
      * 针对web.xml
+     * 针对ContextLoaderListener配置
      * @return
      */
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class[]{ContextLoaderListenerConfig.class};
     }
 
     /**
@@ -29,7 +31,7 @@ public class DefaultAnnotationConfigDispatcherServletInitializer
      */
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{DispatcherServletConfiguration.class};
+        return new Class[]{DispatcherServletConfig.class};
     }
 
     /**

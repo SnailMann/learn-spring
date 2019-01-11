@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--声明增强Bean-->
+    <bean id="greetingBeforeAdvice" class="com.snailmann.spring.aop.advice.GreetingBeforeAdvice"/>
+    <!--声明目标代理对象，即要被代理的对象-->
+    <bean id="target" class="com.snailmann.spring.aop.advice.NoobWaiter"/>
+
+    <!--声明代理Bean对象，Bean Id 叫waiter-->
+    <bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <!--代理所要实现的接口，可以是多个接口-->
+        <property name="proxyInterfaces" value="com.snailmann.spring.aop.advice.Waiter"/>
+        <!--指定需要织入目标对象的增强-->
+        <property name="interceptorNames" value="greetingBeforeAdvice"/>
+        <!--指定要代理的目标对象-->
+        <property name="target">
+            <ref bean="target"/>
+        </property>
+
+    </bean>
+
+</beans>

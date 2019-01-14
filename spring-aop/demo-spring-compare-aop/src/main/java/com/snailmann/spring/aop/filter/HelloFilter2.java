@@ -9,7 +9,7 @@ import java.io.IOException;
 
 @Order(1)
 @Slf4j
-
+@Component
 public class HelloFilter2 implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

@@ -5,9 +5,10 @@ import com.snailmann.spring.aop.interceptor.HelloInterceptor2;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class WebConfig extends WebMvcConfigurerAdapter {
 
     /**
      * 这里的添加顺序就是拦截器的执行执行顺序

@@ -9,12 +9,22 @@ import java.io.IOException;
 
 @Order(2)
 @Slf4j
-@Component
+
 public class HelloFilter implements Filter {
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
+    }
+
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         log.warn("【filter】 - before");
-        filterChain.doFilter(servletRequest,servletResponse);
+        filterChain.doFilter(servletRequest, servletResponse);
         log.warn("【filter】 - after");
+    }
+
+    @Override
+    public void destroy() {
+
     }
 }

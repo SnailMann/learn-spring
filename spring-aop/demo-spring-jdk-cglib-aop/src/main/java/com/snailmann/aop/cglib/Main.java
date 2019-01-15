@@ -8,8 +8,5 @@ public class Main {
         foodStop.sellSomething("apple");
         foodStop.sellFood();
         foodStop.sellJuice();
-        FoodStop.sell();
-
-
     }
 }

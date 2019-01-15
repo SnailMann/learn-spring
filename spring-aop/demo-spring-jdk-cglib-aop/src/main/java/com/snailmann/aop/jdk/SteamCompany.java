@@ -7,6 +7,10 @@ package com.snailmann.aop.jdk;
  */
 public class SteamCompany implements GameConpany,ToolCompany{
 
+    public static void hello(){
+        System.out.println("hello");
+    }
+
     /**
      * 卖游戏，final方法，不可继承
      */

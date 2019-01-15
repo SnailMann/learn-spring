@@ -5,13 +5,9 @@ package com.snailmann.aop.cglib;
  */
 public class FoodStop {
 
-    /**
-     * 测试静态方法
-     */
-    public static void sell(){
-        System.out.println("static sell...");
+    public static void hello(){
+        System.out.println("hello");
     }
-
     /**
      * 卖食物,final类，不可被继承
      */

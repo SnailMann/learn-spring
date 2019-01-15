@@ -5,6 +5,9 @@ package com.snailmann.aop.jdk;
  */
 public interface GameConpany {
 
+
+
+
     /**
      * 卖游戏
      */

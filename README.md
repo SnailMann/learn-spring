@@ -12,5 +12,5 @@ Projects to learn Spring Framework and SpringBoot source code and features!
 
 - spring-aop
 
-学习Spring AOP
+学习Spring AOP机制
 

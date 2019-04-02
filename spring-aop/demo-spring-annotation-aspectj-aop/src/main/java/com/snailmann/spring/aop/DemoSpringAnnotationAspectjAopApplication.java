@@ -18,12 +18,14 @@ public class DemoSpringAnnotationAspectjAopApplication {
 
         HelloHandler helloHandler = context.getBean(HelloHandler.class);
         Student student = new Student();
+        student.setName("Jerry");
+        student.setAge(34);
 
         helloHandler.getStudent(student);
-        helloHandler.getStudent(student,"hello");
+       /* helloHandler.getStudent(student,"hello");
         helloHandler.getAnnotationStudent(student);
         helloHandler.setPointCutStudent(student);
-        helloHandler.returnStudent(student);
+        helloHandler.returnStudent(student);*/
 
     }
 
